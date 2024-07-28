@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/iconopestania.png" type="Imagen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Contacto</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('aGQzch_wdnR3e0pSW')
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <!-- contenedor del logo-->
+            <div id="logo">
+                <a href="index.html">
+                    <span><img id="logo-nav" src="images/logoROSA.png" alt="Logo"></span>
+                </a>
+            </div>
+            <!-- menú de opciones -->
+            <ul class="nav-links">
+                <li><a href="\index.html">Inicio</a></li>
+                <li><a href="\productos.html">Productos</a></li>
+                <li><a href="\nosotros.html">Nosotros</a></li>
+                <li><a href="\descargables.html">Descargables</a></li>
+                <li><a href="\contacto.html">Contacto</a></li>
+            </ul>
+            <!-- botón del menú para dispositivos móviles -->
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <section class="container">
+            <h3>Formulario de Contacto</h3><br><br>
+
+            <form id="form" class="contact-form">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+
+
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required>
+
+
+                <label for="mensaje">Mensaje: </label>
+                <textarea type="text" name="mensaje" id="mensaje" rows="7" required>
+Escriba aquí su consulta y sus datos de contacto.
+-Nombre:
+-Email:
+-WhatsApp:
+                </textarea>
+
+                <button type="submit" id="button" value="Send Email">Enviar</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Pie de Página -->
+        <div class="footer-content">
+
+            <div class="footer-text">
+                <p>&copy;2024 - Vuelta Al Cole Mateito.<br>Todos los Derechos Reservados</p>
+            </div>
+            <!-- contenedor de iconos -->
+            <div class="iconospie">
+                <a href="mailto:vueltaalcolemateito@gmail.com" target="_blank" title="Enviar Mail"
+                    class="fas fa-envelope"></a>
+                <a href="https://www.instagram.com/vueltaalcolemateito/" target="_blank" title="Ir a Instagram"
+                    class="fab fa-instagram"></a>
+                <a href="https://www.facebook.com/vueltaalcolemateito" target="_blank" title="Ir a Facebook"
+                    class="fab fa-facebook"></a>
+                <a href="https://www.youtube.com/@vueltaalcolemateito7950" target="_blank" title="Ir a Youtube"
+                    class="fab fa-youtube"></a>
+                <a href="https://wa.me/5491168030215?text=Hola" target="_blank" title="Contactar por WhatsApp"
+                    class="fab fa-whatsapp"></a>
+            </div>
+
+            <!-- Medios de pago -->
+            <div class="footer-payment">
+                <p>Medios de Pago:</p>
+                <div class="payment-icons">
+                    <img id="mercado-pago" src="images/mercadopago.png" title="Mercado Pago" alt="Mercado Pago">
+                    <i class="fas fa-university" title="Transferencia Bancaria"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        //script para el envío de la consulta 
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_h8j1e9h';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        alert('Enviado Exitosamente!');
+                        this.reset(); // limpiar el formulario
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
+    <!-- link al script de js -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1072 @@
+/* definición de la paleta de colores */
+:root {
+    --bg-color: #F9F9E0;
+    --primary-color: #FF9EAA;
+    --secondary-color: #FFD0D0;
+    --third-color: #3AA6B9;
+    --accent-color: #f1f1f1;
+}
+
+/* ajustes generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Comfortaa';
+    font-size: smaller;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-family: 'Grandstander';
+}
+
+h2 {
+    color: var(--third-color);
+    font-size: 2vw;
+}
+
+h3 {
+    color: var(--third-color);
+    font-size: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    /* que los anchor <a ref> no tenga decoración */
+}
+
+.header {
+    background-color: var(--bg-color);
+    position: sticky;
+    /* queda el nav pegado en la posición */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    /*posición de apilamiento el header se tiene que mostrar encima*/
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    /* separo los elementos con un mismo espacio */
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+logo {
+    display: flex;
+    align-items: center;
+    max-height: 60px;
+}
+
+#logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+#logo-nav {
+    max-width: 55px;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    /* Transición suave para el tamaño */
+}
+
+/* Ajustes tamaño del logo para dispositivos móviles*/
+@media (max-width: 768px) {
+    #logo {
+        max-height: 50px;
+        /* Ajusta el tamaño máximo del logo en móviles */
+    }
+
+    #logo-nav {
+        max-width: 45px;
+        /* Ajusta el tamaño máximo del logo en móviles */
+    }
+}
+
+/* Ajustes del logo para diferentes tamaños de pantalla */
+@media (max-width: 480px) {
+    #logo {
+        max-height: 40px;
+        /* Ajusta el tamaño máximo del logo en pantallas más pequeñas */
+    }
+
+    #logo-nav {
+        max-width: 35px;
+        /* Ajusta el tamaño máximo del logo en pantallas más pequeñas */
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    /* cambio el color de los links del nav cuando paso el mouse */
+}
+
+/*Ajustes del botón de menú para dispositivos móviles*/
+
+.menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-mobile .fas {
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+/* Media Queries de la barra de navegación para dispositivos móviles */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        /*100 % del contenedor padre*/
+        background-color: var(--bg-color);
+        position: absolute;
+        /* absoluta respecto del contenedor */
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+    .nav-links.show {
+        display: flex;
+        /* con la clase show muestro el nav en dispositivos móviles */
+    }
+
+    .menu-mobile {
+        display: block;
+        /* oculto la barra horizontal para mostrar la vertical en mobile */
+    }
+}
+
+/* fin de media queries para barra de navegación en mobile */
+
+#banner {
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+    height: 70vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* Añadido padding para evitar desbordamiento */
+}
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* lo que no entra que vaya para abajo */
+}
+
+.banner-card {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner-card h1 {
+    color: var(--accent-color);
+    font-size: 4.4vw;
+}
+
+.banner-card h2 {
+    color: var(--secondary-color);
+    font-size: 3.4vw;
+    margin-bottom: 30px;
+}
+
+
+/* Ajustes del banner para diferentes tamaños de pantalla */
+
+@media (max-width: 1024px) {
+    .banner-card h1 {
+        font-size: 5vw;
+        /* Ajusta el tamaño del texto h1 */
+    }
+
+    .banner-card h2 {
+        font-size: 4vw;
+        /* Ajusta el tamaño del texto h2 */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-card h1 {
+        font-size: 6vw;
+        /* Ajusta el tamaño del texto */
+    }
+
+    .banner-card h2 {
+        font-size: 5vw;
+        /* Ajusta el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-card h1 {
+        font-size: 7vw;
+        /* Ajusta el tamaño del texto */
+    }
+
+    .banner-card h2 {
+        font-size: 6vw;
+        /* Ajusta el tamaño del texto */
+    }
+}
+
+/* fin de media query del banner */
+
+/* Ajustes del enlace */
+.banner-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-card a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Ajustes específicos para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .banner-card a {
+        padding: 8px 18px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-card a {
+        padding: 6px 16px;
+        /* Ajusta el padding para pantallas más pequeñas */
+    }
+}
+
+#search {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-title {
+    font-size: 3vw;
+}
+
+.search-input {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    color: gray;
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0;
+    outline: none;
+    padding: 0 20px;
+    width: 80%;
+}
+
+/* Estilo para las imágenes de los resultados de búsqueda */
+.result-grid .product-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    width: 150px;
+    /* Ajusta este valor según sea necesario */
+    height: 150px;
+    /* Ajusta este valor según sea necesario */
+}
+
+@media (max-width: 1024px) {
+    .search-title {
+        font-size: 20px;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .result-grid .product-row {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .result-grid .product-image img {
+        width: 350px;
+        height: auto;
+    }
+}
+
+/* Estilo general del título de la sección */
+.destacado-title {
+    font-size: 2vw;
+    /* Ajuste inicial para pantallas grandes */
+    color: var(--third-color);
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 1024px) {
+    .destacado-title {
+        font-size: 3vw;
+        /* Ajuste para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .destacado-title {
+        font-size: 4vw;
+        /* Ajuste para tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .destacado-title {
+        font-size: 5vw;
+        /* Ajuste para teléfonos móviles */
+    }
+}
+
+.destacado-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas 1 fracción */
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 40px;
+    /* Espacio añadido entre destacados y footer */
+}
+
+.destacado-subtitle::after {
+    content: " 💕";
+}
+
+/* Estilo para el contenedor de los elementos destacados */
+.destacado-item {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 300px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+    /* Animación suave al hacer hover */
+}
+
+.destacado-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    transition: transform 0.3s ease-in-out;
+    /* Animación suave al hacer hover */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.destacado-item:hover .destacado-img {
+    transform: scale(1.1);
+    /* Aumenta el tamaño de la imagen al 110% */
+}
+
+/*Efecto más sutil */
+.destacado-item:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño del contenedor */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Añade una sombra */
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 2em;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+}
+
+.footer-icons a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+.footer-payment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#mercado-pago {
+    max-width: 70px;
+    height: auto;
+}
+
+.payment-icons .fa-university {
+    font-size: 1.5em;
+}
+
+@media (min-width: 1200px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-payment {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-payment p {
+        margin: 0;
+        margin-right: 10px;
+    }
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 1.5em;
+    /* Tamaño aumentado para los iconos del footer */
+}
+
+/* Media Queries para destacados pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .destacado-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .destacado-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .destacado-grid {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 columna */
+    }
+
+    .banner-card {
+        padding: 0 10px;
+    }
+
+    .banner-card h1 {
+        font-size: 6vw;
+    }
+
+    .banner-card h2 {
+        font-size: 5vw;
+    }
+
+    .search-title {
+        font-size: 5vw;
+    }
+
+    .search-input {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+/*ajustes para grandes dispositivos porque quedaban muy pequeños los textos*/
+@media (min-width: 1900px) {
+    .header nav {
+        height: 85px;
+    }
+
+    .nav-links a {
+        font-size: 2em;
+    }
+
+    .footer-text {
+        font-size: 2em;
+    }
+
+    .iconospie a {
+        font-size: 2.5em;
+    }
+
+    .footer-payment p {
+        font-size: 2em;
+    }
+
+    #mercado-pago {
+        max-width: 100px;
+    }
+
+    .payment-icons .fa-university {
+        font-size: 2.5em;
+    }
+
+
+    .banner-card h1 {
+        font-size: 5vw;
+    }
+
+    .banner-card h2 {
+        font-size: 4vw;
+    }
+
+    .banner-card a {
+        font-size: 2em;
+        padding: 15px 30px;
+    }
+
+    #destacado-container {
+        max-width: 90%;
+    }
+
+    .destacado-item {
+        width: 450px;
+        height: 550px;
+        font-size: 24px;
+    }
+
+
+    .destacado-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #search {
+        height: 400px;
+    }
+
+
+    .search-input {
+        font-size: 2em;
+        height: 60px;
+        width: 90%;
+    }
+}
+
+
+/*fin de ajustes para grandes dispositivos porque quedaban muy pequeños los textos*/
+
+/* se añade estilo para la tabla de productos.html */
+/* Estilos para la tabla de productos */
+.product-table {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    /* se centra el contenido horizontalmente */
+}
+
+/* Estilos para pantallas pequeñas (predeterminado) */
+.product-table {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/* Para pantallas medianas (1024px y más) */
+@media (min-width: 1024px) {
+    .product-table {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Para pantallas grandes (1900px y más) */
+@media (min-width: 1900px) {
+    .product-table {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 2560px) {
+    .product-table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-details h3 {
+        font-size: 2.5em;
+        /* Aumenta el tamaño de la fuente para el título del producto */
+    }
+
+    .product-details p {
+        font-size: 2em;
+        /* Aumenta el tamaño de la fuente para la descripción del producto */
+    }
+}
+
+
+.product-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    /* sin borde */
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Estilos para las imágenes del producto */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilos para los detalles del producto */
+.product-details {
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: var(--third-color);
+}
+
+.product-price {
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/*
+@media (min-width: 768px) {
+    .product-table {
+        flex-wrap: nowrap;
+    }
+    .product-row {
+        flex-direction: row;
+        text-align: left;
+    }
+    .product-image, .product-details {
+        width: 50%;
+    }
+}*/
+
+/* Diseño para dispositivos grandes */
+@media (min-width: 1024px) {
+    .product-table {
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        /* Justificar contenido a lo largo del contenedor */
+    }
+
+    .product-row {
+        flex-direction: row;
+        text-align: left;
+        width: 100%;
+        max-width: none;
+        /* Ajustar el ancho en dispositivos grandes */
+    }
+
+    .product-image,
+    .product-details {
+        width: 50%;
+    }
+}
+
+/* Diseño para dispositivos pequeños */
+
+@media (max-width: 1023px) {
+    .product-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: calc(100% - 40px);
+        /* Ajustar el ancho con pequeños márgenes */
+        max-width: 400px;
+        /* Ajustar el ancho máximo en dispositivos pequeños */
+        margin: 20px;
+        /* Márgenes para centrado */
+    }
+
+    .product-image,
+    .product-details {
+        width: 100%;
+    }
+}
+
+
+/* formulario de contacto */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: var(--third-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    color: gray;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.contact-form input:focus,
+textarea:focus {
+    border-color: var(--secondary-color);
+    /* Cambia el color a rosa claro */
+    outline: none;
+    /* Opcional: elimina el borde de enfoque predeterminado del navegador */
+}
+
+.contact-form button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'Comfortaa';
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.contact-form button:hover {
+    
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 0 15px;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 300px;
+    /* Altura por defecto para dispositivos pequeños */
+}
+
+.carousel-inner {
+    display: flex;
+    animation: slide 30s infinite;
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que las imágenes se ajusten dentro del contenedor sin distorsionarse */
+    object-position: center;
+    /* Centra la imagen en el contenedor */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0.2%);
+    }
+
+    25% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(-75%);
+    }
+
+    75% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0.2%);
+    }
+}
+
+
+/* Media query para dispositivos grandes */
+@media (min-width: 768px) {
+    .carousel {
+        height: 400px;
+        /* Altura ajustada para dispositivos grandes */
+    }
+
+}
+
+/* Párrafo de presentación */
+main p {
+    color: gray;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Iframe de YouTube */
+
+.video-container {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media query para dispositivos grandes */
+@media (min-width: 768px) {
+    .video-container {
+        width: 50%;
+        /* Ajusta el ancho según tus necesidades */
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para el modal de productos que muestra las imagenes en grande */
+.view-more {
+    color: var(--third-color);
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(249, 249, 224, 0.8);
+
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* tabla responsiva y redes sociales */
+/* Estilo de la tabla */
+.responsive-container {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.responsive-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    font-size: 18px;
+}
+
+
+th,
+td {
+    padding: 2px;
+    text-align: left;
+
+}
+
+td i {
+    font-size: 20px;
+}
+
+th {
+    padding: 20px;
+    font-weight: bold;
+}
+
+td a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: inherit;
+    /* Usa el color del texto actual */
+}
+
+td a:hover {
+    color: var(--secondary-color)
+}
+
+.icono-tabla {
+    width: 20px;
+    /* Ajusta este valor según el tamaño de los iconos de Font Awesome */
+    height: auto;
+}
+
+.material-icons {
+    color: var(--primary-color);
+    vertical-align: middle;
+    /* Alinea verticalmente los iconos con el texto */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.logo-container img {
+    max-width: 90%;
+    height: auto;
+}
+
+.map-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+}
+
+@media (max-width: 768px) {
+    .responsive-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .logo-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

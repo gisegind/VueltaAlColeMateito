@@ -1,0 +1,266 @@
+/* paleta de colores */
+:root{
+    --bg-color:#F9F9E0;
+    --primary-color:#FF9EAA;
+    --secondary-color:#FFD0D0;
+    --third-color:#3AA6B9;
+    --accent-color:#f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+ 
+
+body{
+    background-color: var(--bg-color);
+    font-family:'Comfortaa';
+    font-size: smaller;
+}
+
+
+
+h1{
+    color: var(--accent-color);
+    font-family: 'Grandstander';
+}
+
+h2{
+    color:var(--third-color);
+    font-size: 2vw;
+}
+
+a{
+    text-decoration: none; /*que los anchor <a ref> no tenga decorción*/
+}
+
+.header{
+    background-color:var(--bg-color);
+    position:sticky; /*queda el nav pegado en la posición */
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between; /*separo los elementos con un mismo espacio*/
+    align-items: center;
+    height: 60px;
+    padding:0 20px;
+}
+
+#logo , #logo a{
+    font-weight: bold;
+    color:white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color); /*cambio el color de los links del nav cuando paso el mouse*/
+}
+
+#btn-inicio{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#btn-inicio:hover{
+    background-color: var(--secondary-color);  
+}
+
+#banner{
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.1);
+    height: 70vh;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.display-flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /*lo que no entra que vaya para abajo*/
+}
+
+.banner-card{
+    text-align: center;
+    padding:0 100px;
+}
+
+.banner-card h1{
+    color:var(--accent-color);
+    font-size: 4.4vw;
+}
+
+.banner-card h2{
+    color:var(--secondary-color);
+    font-size: 3.4vw;
+    margin: bottom 30px;
+}
+
+#search {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-title{
+    font-size: 3vw;
+
+}
+
+.search-input{
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--accent-color);
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0;
+    outline: none;
+    padding: 0 20px;
+    width: 80%;
+}
+
+.destacado-grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr); /* 4 columnas 1 fracción*/
+    grid-template-rows: repeat(2, 1fr); /* 2 filas 1 fracción*/
+    justify-items: center;
+    row-gap: 20px;
+    gap:20px;
+}
+.destacado-subtitle::after {
+    content:" 💕";
+}
+
+.destacado-item{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+
+
+
+
+.destacado-img { /*que cubra todo el contenido y posicionado cambie el tamaño*/
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.novedad-scroller{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.novedad-item {
+    width: 170px;
+    min-width: 170px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.novedad-img{
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgb(255 255 255 /10%);
+    width: 100%;
+    overflow: hidden;
+}
+
+.novedad-detail{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+ 
+}
+
+.novedad-title{
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: .5em auto;
+
+}
+
+.novedad-title:hover{
+    color: var(--secondary-color);
+
+
+}
+
+.novedad-subtitle-{
+    
+    color: var(--secondary-color);
+    margin:auto;
+    
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    height: 150px;
+    width: 100%;
+    gap: 20px;
+    padding: 2em;
+    color: var(--accent-color)
+   
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--accent-color)
+}
+
+
+
+
+
+
+
