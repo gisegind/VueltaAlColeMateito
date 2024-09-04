@@ -803,11 +803,11 @@ textarea:focus {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
+
 }
 
 .contact-form button:hover {
-    
+
     background-color: var(--secondary-color);
 }
 
@@ -954,6 +954,24 @@ main p {
     max-width: 700px;
 }
 
+#video-modal-content {
+    max-width: 90%;
+    /* Limitar el ancho máximo del contenido en pantallas grandes */
+    max-height: 90%;
+    /* Limitar la altura máxima del contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content iframe {
+    align-items: center;
+    max-width: 80%;
+    /* Limitar el ancho máximo del modal */
+}
+
+
+
 .close {
     position: absolute;
     top: 15px;
@@ -1069,4 +1087,365 @@ td a:hover {
         width: 100%;
         margin-top: 20px;
     }
+}
+
+
+/* Estilos para el contenedor principal del BLOG*/
+.blog-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    padding: 40px;
+
+}
+
+/* Estilos para los posts */
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.post {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-content h2 {
+    font-size: 1.5em;
+    color: var(--third-color);
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    font-size: medium;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.read-more,
+.view-video {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/*Estilos para la grilla de Los más Pedidos*/
+/* Grid para los videos */
+.grid-videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-videos img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-videos img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el enlace "Ver más pedidos" */
+.ver-mas {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ver-mas:hover {
+    color: var(--secondary-color);
+}
+
+/* Para dispositivos grandes */
+@media (min-width: 1024px) {
+    .sidebar-section .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos columnas */
+        grid-template-rows: repeat(2, auto);
+        /* Dos filas */
+        gap: 10px;
+        /* Espacio entre las fotos */
+    }
+
+    .sidebar-section .grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+/* Responsividad para mobile */
+@media (max-width: 768px) {
+    .grid-videos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.sidebar-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-section h3 {
+    margin-bottom: 15px;
+    color: var(--third-color);
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-section ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-section ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.sidebar-section ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.sidebar-section p {
+    color: #666;
+}
+
+.view-video {
+    color: var(--primary-color)
+}
+
+.view-video:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsividad  del Blog*/
+@media (max-width: 1024px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.responsive-image {
+    width: 100%;
+    /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    /*  redondea las esquinas de la imagen */
+    margin-top: 10px;
+    /*  agrega un margen superior para separarla del contenido anterior */
+}
+
+.mp4-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 90%;
+    /* Relación de aspecto 16:9 */
+    height: 0;
+    /* Altura controlada por el padding-bottom */
+    overflow: hidden;
+    border-radius: 8px;
+    /*  redondea las esquinas del contenedor */
+    margin-top: 10px;
+    /* margen superior */
+}
+
+.responsive-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que el video se ajuste sin distorsionar */
+    border-radius: 8px;
+    /*  redondea las esquinas del video */
+}
+
+@media (min-width: 1024px) {
+    .video-container {
+        padding-bottom: 40%;
+        /* Cambia la relación de aspecto para pantallas grandes */
+    }
+}
+
+/*Estilos para la Galería */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 2;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* gallery-sidebar */
+.gallery-sidebar {
+    flex: 1;
+
+}
+
+.gallery-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-sidebar-item {
+
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.gallery-sidebar-item img {
+    display: block;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsivo */
+/* Para pantallas grandes (1024px o más) */
+@media (min-width: 1024px) {
+    .gallery-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .gallery {
+        flex: 3;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-sidebar {
+        flex: 1;
+        margin-top: 0;
+    }
+}
+
+/* Para pantallas medianas (menores de 1024px) */
+@media (max-width: 1023px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas en pantallas medianas */
+        width: 100%;
+    }
+
+    .gallery-sidebar {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .gallery-sidebar-content {
+        align-items: center;
+    }
+}
+
+/* Para pantallas pequeñas (menores de 768px) */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        /* Una columna en pantallas pequeñas */
+    }
+
+    .gallery-item img {
+        width: 100%;
+        max-width: 500px;
+        /* Ajusta el ancho máximo */
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gallery-sidebar {
+        width: 100%;
+    }
+
+    .gallery-sidebar-content {
+        align-items: center;
+    }
+
+    .gallery-sidebar-item img {
+        width: 500px;
+        /* Mantiene la proporción de la imagen */
+        object-fit: cover;
+        /* Asegura que la imagen cubra bien el espacio */
+    }
+
 }

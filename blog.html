@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog con Tips e Ideas Geniales para eventos y Vuelta a Clases - Vuelta al Cole Mateito</title>
+    <meta name="description"
+        content="Seguí nuestras novedades, con tips e ideas geniales y económicas para tu evento o la vuelta al cole.">
+    <link rel="shortcut icon" href="images/logogris.png" type="Imagen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <!-- contenedor del logo-->
+            <div id="logo">
+                <a href="index.html">
+                    <span><img id="logo-nav" src="images/logoROSA.png" alt="Logo"></span>
+                </a>
+            </div>
+            <!-- menú de opciones -->
+            <ul class="nav-links">
+                <li><a href="\index.html">Inicio</a></li>
+                <li><a href="\productos.html">Productos</a></li>
+                <li><a href="\nosotros.html">Nosotros</a></li>
+                <li><a href="\descargables.html">Descargables</a></li>
+                <li><a href="\contacto.html">Contacto</a></li>
+                <li><a href="\blog.html">Blog</a></li>
+            </ul>
+            <!-- botón del menú para dispositivos móviles -->
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <main class="blog-container">
+            <section class="blog-posts">
+                <!-- Post 1 -->
+                <article class="post">
+                    <img src="images/ideas.jpg" alt="estampita y denario ideas fáciles">
+                    <div class="post-content">
+                        <h2>Hazlo tú misma</h2>
+                        <p>Te dejo esta idea para que te animes a hacerlo vos misma. Estampita y denario en bolsita de
+                            organza. Se necesitan: perlas color natural, cuentas separadoras color metal, cruces
+                            pequeñas, hilo
+                            tanza y bolsitas de organza. Además, unas lindas estampitas, junto a su tarjetita tag que es
+                            la que decora el souvenir. Podés armar los denarios como pulsera (es más sencillo aún), o
+                            como el de la foto que además
+                            necesita de un alfiler rulo y argollitas que unen las piezas. ¡Vos podés, con amor todo sale
+                            bien!</p>
+                        <a href="#" class="view-video" data-modal="video-modal-1">Ver video</a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post">
+                    <img src="images/kit_grizzy_lemm.jpg" alt="Imagen del Post 2">
+                    <div class="post-content">
+                        <h2>Ideas de Cumpleaños Económicas</h2>
+                        <p>Te doy algunas ideas para que puedas armar un lindo cumple sin gastar tanto. Reutilizá y
+                            buscá cosas que tengas en tu casa. Podes armar un
+                            banderín impreso o hecho con papeles de colores, telas... para decorar la torta un
+                            caketopper sencillo con los personajes preferidos de tu peque (o pinchos),
+                            unos stickers para cerrar bolsitas (te recomiendo la bolsa de papel madera es la más
+                            económica), las podes rellenar con pochoclos o golosinas... y listo a festejar en la
+                            plaza!!!
+                            ... recordá que todo lo que se hacer con amor siempre sale bien!!!</p>
+                        <a href="#" class="view-video" data-modal="video-modal-2">Ver Video</a>
+                    </div>
+                </article>
+
+            </section>
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Ideas Para el Cole</h3>
+                    <p>...personalizá tu vuelta a clases!</p>
+
+                    <!-- Imagen Responsiva -->
+                    <img src="images/utiles_arg.jpg" alt="Ideas para el Cole" class="responsive-image">
+                    <!-- Link a la página de "Los Más Pedidos" -->
+                    <a href="/etiquetas.html" class="ver-mas">Etiquetas, Asignaturas, Horarios</a>
+
+                </div>
+                <!-- Sidebar Section: Los Más Pedidos -->
+                <div class="sidebar-section">
+                    <h3>Los Más Pedidos</h3>
+                    <p>Les dejo aquí sus preferidos!!!!</p>
+
+                    <!-- Grid de imágenes con enlaces a videos de YouTube -->
+                    <div class="grid-videos">
+                        <a href="#" class="view-video" data-modal="video-modal-3"><img
+                                src="images/kit_comunion_nena_floral.jpg" alt="Video 1"></a>
+                        <a href="#" class="view-video" data-modal="video-modal-4"><img src="images/kit_minions.jpg"
+                                alt="Video 2"></a>
+                        <a href="#" class="view-video" data-modal="video-modal-5"><img src="images/escolarfloral.jpg"
+                                alt="Video 3"></a>
+                        <a href="#" class="view-video" data-modal="video-modal-6"><img src="images/suculenta.jpg"
+                                alt="Video 4"></a>
+                    </div>
+
+                    <!-- Link a la página de "Los Más Pedidos" -->
+                    <a href="/maspedidos.html" class="ver-mas">Los más pedidos!!!</a>
+                </div>
+            </aside>
+        </main>
+
+    </main>
+
+
+    <!-- Modal para el video del Post 1 -->
+    <div id="video-modal-1" class="modal">
+        <div class="modal-content" id="video-modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-1" width="560" height="560" src="https://www.youtube.com/embed/dw8t6a9udAE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal para el video del Post 2 -->
+    <div id="video-modal-2" class="modal">
+        <div class="modal-content" id="video-modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-2" width="560" height="560" src="https://www.youtube.com/embed/kYptaPzT7K8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+    <div id="video-modal-3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-3" width="560" height="315" src="https://www.youtube.com/embed/d98DX-4vslg"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modals para los más pedidos-->
+    <div id="video-modal-4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-4" width="560" height="315" src="https://www.youtube.com/embed/GEzMeHpDSSM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <div id="video-modal-5" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-5" width="560" height="315" src="https://www.youtube.com/embed/UeaiojZb5Vw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <div id="video-modal-6" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-6" width="560" height="315" src="https://www.youtube.com/embed/99t4yRhtrWo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Pie de Página -->
+        <div class="footer-content">
+
+            <div class="footer-text">
+                <p>&copy;2024 - Vuelta Al Cole Mateito.<br>Todos los Derechos Reservados</p>
+            </div>
+            <!-- contenedor de iconos -->
+            <div class="iconospie">
+                <a href="mailto:vueltaalcolemateito@gmail.com" target="_blank" title="Enviar Mail"
+                    class="fas fa-envelope"></a>
+                <a href="https://www.instagram.com/vueltaalcolemateito/" target="_blank" title="Ir a Instagram"
+                    class="fab fa-instagram"></a>
+                <a href="https://www.facebook.com/vueltaalcolemateito" target="_blank" title="Ir a Facebook"
+                    class="fab fa-facebook"></a>
+                <a href="https://www.youtube.com/@vueltaalcolemateito7950" target="_blank" title="Ir a Youtube"
+                    class="fab fa-youtube"></a>
+                <a href="https://wa.me/5491168030215?text=Hola" target="_blank" title="Contactar por WhatsApp"
+                    class="fab fa-whatsapp"></a>
+            </div>
+
+            <!-- Medios de pago -->
+            <div class="footer-payment">
+                <p>Medios de Pago:</p>
+                <div class="payment-icons">
+                    <img id="mercado-pago" src="images/mercadopago.png" title="Mercado Pago" alt="Mercado Pago">
+                    <i class="fas fa-university" title="Transferencia Bancaria"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- link al script de js -->
+    <script src="js/script.js"></script>
+
+    <!-- Script de jQuery -->
+    <script>$(document).ready(function () {
+            // Al hacer clic en el enlace de ver video
+            $('.view-video').on('click', function (event) {
+                event.preventDefault(); // Prevenir comportamiento por defecto del enlace
+                var modalId = $(this).data('modal'); // Obtener el ID del modal a mostrar
+                $('#' + modalId).fadeIn(); // Mostrar el modal correspondiente
+            });
+
+            // Al hacer clic en la 'X', cerrar el modal
+            $('.close').on('click', function () {
+                var modal = $(this).closest('.modal');
+                modal.fadeOut();
+                var iframe = modal.find('iframe');
+                iframe.attr('src', iframe.attr('src')); // Detener el video al cerrar
+            });
+
+            // Al hacer clic fuera del contenido del modal, cerrar el modal
+            $('.modal').on('click', function (event) {
+                var modalContent = $(this).find('.modal-content');
+                if (!modalContent.is(event.target) && !modalContent.has(event.target).length) {
+                    $(this).fadeOut();
+                    var iframe = $(this).find('iframe');
+                    iframe.attr('src', iframe.attr('src')); // Detener el video al cerrar
+                }
+            });
+
+            // Al presionar la tecla Escape, cerrar el modal
+            $(document).on('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    $('.modal').each(function () {
+                        var modal = $(this);
+                        if (modal.is(':visible')) {
+                            modal.fadeOut();
+                            var iframe = modal.find('iframe');
+                            iframe.attr('src', iframe.attr('src')); // Detener el video al cerrar
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
