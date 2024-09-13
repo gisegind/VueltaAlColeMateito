@@ -970,14 +970,12 @@ main p {
     /* Limitar el ancho máximo del modal */
 }
 
-
-
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
+    top:65px;
+    right: 65px;
+    color: var(--primary-color);
+    font-size: 30px;
     font-weight: bold;
     transition: 0.3s;
 }
