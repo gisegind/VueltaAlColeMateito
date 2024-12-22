@@ -17,10 +17,9 @@
 ## 📋 Tabla de Contenidos
 1. [Descripción](#descripción)
 2. [Características](#características)
-3. [Estructura del Proyecto](#estructura-del-proyecto)
-4. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-5. [Cómo Contribuir](#cómo-contribuir)
-6. [Contacto](#contacto)
+3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+4. [Estructura del Proyecto](#estructura-del-proyecto)
+
 
 ---
 
@@ -47,6 +46,29 @@ Está diseñado para ser intuitivo, atractivo y completamente responsivo, con fu
 - 🌐 **Redes sociales integradas** en el footer.  
 
 ---
+## 🛠️ Tecnologías Utilizadas
+
+- ![HTML](https://img.shields.io/badge/HTML-5-orange?logo=html5) **HTML5**  
+  Utilizado para la estructura semántica del sitio, incluyendo etiquetas como `<header>`, `<nav>`, `<main>`, y `<footer>`.  
+- ![CSS](https://img.shields.io/badge/CSS-3-blue?logo=css3) **CSS3**  
+  Implementado para estilos responsivos y animaciones personalizadas con `@keyframes`.  
+- ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript) **JavaScript ES6**  
+  Añade interactividad avanzada, como el buscador en tiempo real, menú hamburguesa y la apertura de videos en modales.  
+- ![jQuery](https://img.shields.io/badge/jQuery-Interactive-blueviolet?logo=jquery) **jQuery**  
+  Utilizado para funcionalidades como abrir y cerrar videos de manera interactiva sin abandonar la página.  
+- ![EmailJS](https://img.shields.io/badge/EmailJS-Contact-orange?logo=gmail) **EmailJS**  
+  Implementado para hacer funcional el formulario de contacto y enviar mensajes directamente a una casilla de correo.  
+- ![Netlify](https://img.shields.io/badge/Netlify-Deployed-brightgreen?logo=netlify) **Netlify**  
+  Servicio utilizado para desplegar y alojar el sitio web.  
+- ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-Stylish-blue?logo=googlefonts) **Google Fonts**  
+  Para acceder a tipografías modernas y atractivas que mejoran el diseño.  
+- ![Font Awesome](https://img.shields.io/badge/Font%20Awesome-Icons-green?logo=fontawesome) **Font Awesome**  
+  Biblioteca de iconos utilizada para enriquecer la interfaz del sitio.  
+- ![Git](https://img.shields.io/badge/Git-Versioning-orange?logo=git) **Git**  
+  Herramienta de control de versiones utilizada durante el desarrollo del proyecto.  
+- ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github) **GitHub**  
+  Plataforma donde se encuentra alojado el repositorio del proyecto para colaboración y seguimiento.  
+
 
 ## 📂 Estructura del Proyecto
 
